@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const FeaturedCourses = () => {
   return (
-    <section id="about" className={`bg-zinc-200/70 py-16`}>
+    <section id="about" className={`bg-white py-16`}>
       <div className={`container p-12 space-y-4 mx-auto`}>
         {/* Section Heading */}
         <SectionHeading
@@ -22,7 +22,7 @@ const FeaturedCourses = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
-          className={`grid sm:grid-cols-2 md:grid-cols-3 gap-8 mt-12`}
+          className={`grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12`}
         >
           {/* TODO: when courses are implemented course Card  */}
 

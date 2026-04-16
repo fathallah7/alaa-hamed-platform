@@ -6,6 +6,7 @@ import Link from "next/link";
 import sectionBg from "@/public/textures.jpg";
 import { motion } from "framer-motion";
 import { containerVariants, itemVariants } from "@/types/framerTypes";
+import ArabicTexture from "@/components/ui/ArabicTexture";
 
 const stats = [
   { label: "طالب وطالبة", value: "1M+" },
@@ -19,15 +20,7 @@ const HeroSection = () => {
       id="hero"
       className="relative min-h-[calc(100vh-72px)] py-8 md:py-0 p-4 flex flex-col items-center w-full overflow-hidden"
     >
-      <div className="absolute inset-0 -z-10">
-        <Image
-          src={sectionBg}
-          alt="Arabic texture background"
-          fill
-          priority
-          className="object-cover brightness-90"
-        />
-      </div>
+      <ArabicTexture />
 
       <motion.div
         variants={containerVariants}

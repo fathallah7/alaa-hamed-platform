@@ -44,14 +44,14 @@ const AboutSection = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
-          className={`grid sm:grid-cols-2 md:grid-cols-4 gap-8 mt-12`}
+          className={`grid md:grid-cols-2 xl:grid-cols-4 gap-8 mt-12`}
         >
           {/* Card Item */}
           {paths.map((path, i) => (
             <motion.div
               variants={itemVariants}
               key={i}
-              className="flex flex-col gap-5 bg-white border border-border rounded-2xl p-8  shadow-xl shadow-zinc-500/10 hover:shadow-2xl hover:shadow-zinc-500/25 hover:-translate-y-2 transition-all duration-300"
+              className="flex flex-col max-xl:items-center gap-5 bg-white border border-border rounded-2xl p-8  shadow-xl shadow-zinc-500/10 hover:shadow-2xl hover:shadow-zinc-500/25 hover:-translate-y-2 transition-all duration-300"
             >
               <div
                 className={`bg-primary rounded-xl w-16 h-16 flex items-center justify-center`}
