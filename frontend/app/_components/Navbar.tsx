@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "@/public/alaa_hamed_logo.png";
+import logo from "@/public/logo.png";
 import Link from "next/link";
 import NavActions from "./NavActions";
 
@@ -16,6 +16,7 @@ const Navbar = () => {
             alt="Alaa Hamed Academy Logo"
             width={72}
             height={72}
+            priority
           />
         </Link>
         {/* Nav items + log in */}
