@@ -12,7 +12,7 @@ import {
 
 const Navbar = () => {
   return (
-    <nav className="sticky top-0 z-50 w-full h-18 flex items-center justify-center backdrop-blur-md bg-zinc-100/80 border-b border-zinc-200">
+    <nav className="sticky top-0 z-100 w-full h-18 flex items-center justify-center backdrop-blur-md shadow-sm bg-zinc-100/80 border-b border-zinc-200">
       <div className="w-full max-w-[90%] md:max-w-10/12 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="shrink-0">
