@@ -1,10 +1,11 @@
 "use client"; // Required for Framer Motion
 
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import Link from "next/link";
-import sectionBg from "@/public/textures.jpg";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
+import { containerVariants, itemVariants } from "@/types/framerTypes";
+import ArabicTexture from "@/components/ui/ArabicTexture";
+import CTAButton from "@/components/ui/CTAButton";
 
 const stats = [
   { label: "طالب وطالبة", value: "1M+" },
@@ -13,38 +14,12 @@ const stats = [
 ];
 
 const HeroSection = () => {
-  // Animation Variants
-  const containerVariants: Variants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.2, delayChildren: 0.3 },
-    },
-  };
-
-  const itemVariants: Variants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
-  };
-
   return (
     <section
       id="hero"
       className="relative min-h-[calc(100vh-72px)] py-8 md:py-0 p-4 flex flex-col items-center w-full overflow-hidden"
     >
-      <div className="absolute inset-0 -z-10">
-        <Image
-          src={sectionBg}
-          alt="Arabic texture background"
-          fill
-          priority
-          className="object-cover brightness-90"
-        />
-      </div>
+      <ArabicTexture />
 
       <motion.div
         variants={containerVariants}
@@ -81,14 +56,8 @@ const HeroSection = () => {
             variants={itemVariants}
             className="flex flex-wrap gap-4 mt-2"
           >
-            <Link href="/start">
-              <Button
-                size="lg"
-                className="px-8 py-7 font-bold text-lg shadow-lg shadow-primary/20 hover:scale-105 transition-transform active:scale-95"
-              >
-                ابدأ رحلتك الآن
-              </Button>
-            </Link>
+            {/* FIXME: handle href later */}
+            <CTAButton text="ابدأ رحلتك الآن" href="/" />
           </motion.div>
 
           <motion.div
