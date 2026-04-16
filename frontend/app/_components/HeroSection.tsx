@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import sectionBg from "@/public/textures.jpg";
 import { motion, Variants } from "framer-motion";
+import { containerVariants, itemVariants } from "@/types/framerTypes";
 
 const stats = [
   { label: "طالب وطالبة", value: "1M+" },
@@ -13,24 +14,6 @@ const stats = [
 ];
 
 const HeroSection = () => {
-  // Animation Variants
-  const containerVariants: Variants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.2, delayChildren: 0.3 },
-    },
-  };
-
-  const itemVariants: Variants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
-  };
-
   return (
     <section
       id="hero"
