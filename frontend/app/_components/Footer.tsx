@@ -1,9 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
-import { Mail, Phone, MapPin } from "lucide-react";
-import { motion } from "framer-motion";
+import { Mail, Phone } from "lucide-react";
 
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 import Logo from "@/components/ui/Logo";
