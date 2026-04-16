@@ -1,16 +1,11 @@
-import { Button } from "@/components/ui/button";
-import { Trash2 } from "lucide-react";
+import HeroSection from "./_components/HeroSection";
 
-const page = () => {
+const HomePage = () => {
   return (
-    <div>
-      <h2>Start the project</h2>
-      <Button variant={"destructive"}>
-        <Trash2 />
-        <span>Delete</span>
-      </Button>
-    </div>
+    <>
+      <HeroSection />
+    </>
   );
 };
 
-export default page;
+export default HomePage;

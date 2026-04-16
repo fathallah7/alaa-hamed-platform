@@ -11,12 +11,23 @@ const navLinks = [
   { name: "الدورات", href: "/courses" },
   { name: "تواصل معنا", href: "/contact" },
 ];
-
-const NavActions = () => {
+const NavActions = ({ isMobile }: { isMobile?: boolean }) => {
   const pathname = usePathname();
   return (
-    <div className={`flex justify-end items-center gap-8 grow max-w-[60%]`}>
-      <ul className={`flex gap-10 items-center font-medium grow text-primary`}>
+    <div
+      className={cn(
+        "flex items-center gap-8",
+        isMobile
+          ? "flex-col items-start w-full p-4"
+          : "flex-row justify-end grow max-w-[60%]",
+      )}
+    >
+      <ul
+        className={cn(
+          "flex gap-10 items-center font-medium grow text-primary",
+          isMobile && "flex-col items-start gap-6",
+        )}
+      >
         {navLinks.map((link) => {
           const isActive = pathname === link.href;
           return (
