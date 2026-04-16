@@ -37,7 +37,8 @@ const footerLinks = [
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-white pt-16 pb-8 border-t border-zinc-100">
+    <footer className="w-full bg-white pt-16 pb-8">
+      <hr className={`max-w-6xl mx-auto border-zinc-400/50 mb-8`} />
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-right">
           {/* Section 4: Branding */}
@@ -115,8 +116,22 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-16 pt-8 border-t border-zinc-50 text-center text-zinc-400 text-xs">
-          © {new Date().getFullYear()} أكاديمية علاء حامد. جميع الحقوق محفوظة
+        <div className="mt-8 max-w-6xl mx-auto pt-8 border-t border-zinc-400/50 text-center text-zinc-600 text-xs flex justify-between items-center">
+          <span>
+            © {new Date().getFullYear()} أكاديمية علاء حامد. جميع الحقوق محفوظة
+          </span>
+          <span
+            className={`[&_a]:text-primary/75 [&_a]:font-semibold [&_a]:cursor-pointer [&_a]:underline [&_a]:underline-offset-2 [&_a]:hover:text-primary [&_a]:transition-colors [&_a]:duration-300`}
+          >
+            تم التنفيذ بفضل اللّه بواسطة{" "}
+            <a target="_blank" href="https://mnmlst-nine.vercel.app">
+              Mnmlst
+            </a>{" "}
+            و{" "}
+            <a target="_blank" href="https://mnmlst-nine.vercel.app">
+              Abdullah
+            </a>
+          </span>
         </div>
       </div>
     </footer>
