@@ -54,7 +54,7 @@ const NavActions = ({ isMobile }: { isMobile?: boolean }) => {
       <Link href={"/"}>
         <Button
           variant={"outline"}
-          className={`p-6 py-5 text-md border-primary text-primary hover:[&_svg]:stroke-foreground hover:bg-primary/10 flex flex-row-reverse items-center gap-2`}
+          className={`p-4 py-5 hover:[&_svg]:stroke-muted flex flex-row-reverse items-center gap-2`}
         >
           <LogIn
             className={`stroke-primary mb-0.5 transition-colors duration-300`}

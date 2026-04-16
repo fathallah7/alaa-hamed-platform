@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import sectionBg from "@/public/textures.jpg";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import { containerVariants, itemVariants } from "@/types/framerTypes";
 
 const stats = [
