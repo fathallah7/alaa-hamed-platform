@@ -1,6 +1,3 @@
-import Image from "next/image";
-import logo from "@/public/logo.png";
-import Link from "next/link";
 import NavActions from "./NavActions";
 import { Menu } from "lucide-react";
 import {
@@ -9,22 +6,14 @@ import {
   SheetTrigger,
   SheetTitle,
 } from "@/components/ui/sheet";
+import Logo from "@/components/ui/Logo";
 
 const Navbar = () => {
   return (
     <nav className="sticky top-0 z-100 w-full h-18 flex items-center justify-center backdrop-blur-md shadow-sm bg-zinc-100/80 border-b border-zinc-200">
       <div className="w-full max-w-[90%] md:max-w-10/12 flex justify-between items-center">
         {/* Logo */}
-        <Link href="/" className="shrink-0">
-          <Image
-            src={logo}
-            alt="Alaa Hamed Academy Logo"
-            width={64}
-            height={64}
-            priority
-            className="w-auto h-16 object-contain"
-          />
-        </Link>
+        <Logo />
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex flex-1 justify-end">

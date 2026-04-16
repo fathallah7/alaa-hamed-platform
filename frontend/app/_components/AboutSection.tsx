@@ -51,10 +51,10 @@ const AboutSection = () => {
             <motion.div
               variants={itemVariants}
               key={i}
-              className="flex flex-col max-xl:items-center gap-5 bg-white border border-border rounded-2xl p-8  shadow-xl shadow-zinc-500/10 hover:shadow-2xl hover:shadow-zinc-500/25 hover:-translate-y-2 transition-all duration-300"
+              className="flex flex-col max-xl:items-center gap-5 bg-white border border-border rounded-2xl p-8  shadow-xl shadow-zinc-500/10 hover:shadow-2xl hover:shadow-zinc-500/25 hover:-translate-y-2 transition-all duration-500 group"
             >
               <div
-                className={`bg-primary rounded-xl w-16 h-16 flex items-center justify-center`}
+                className={`bg-primary rounded-xl w-16 h-16 flex items-center justify-center  shadow-xl shadow-primary/20  group-hover:shadow-3xl group-hover:shadow-primary2/30 transition-all duration-1000`}
               >
                 <path.icon className={`stroke-muted`} size={30} />
               </div>

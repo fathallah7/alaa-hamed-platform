@@ -1,12 +1,11 @@
 "use client"; // Required for Framer Motion
 
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import Link from "next/link";
-import sectionBg from "@/public/textures.jpg";
 import { motion } from "framer-motion";
 import { containerVariants, itemVariants } from "@/types/framerTypes";
 import ArabicTexture from "@/components/ui/ArabicTexture";
+import CTAButton from "@/components/ui/CTAButton";
 
 const stats = [
   { label: "طالب وطالبة", value: "1M+" },
@@ -57,14 +56,8 @@ const HeroSection = () => {
             variants={itemVariants}
             className="flex flex-wrap gap-4 mt-2"
           >
-            <Link href="/start">
-              <Button
-                size="lg"
-                className="px-8 py-7 font-bold text-lg shadow-lg shadow-primary/20 hover:scale-105 transition-transform active:scale-95"
-              >
-                ابدأ رحلتك الآن
-              </Button>
-            </Link>
+            {/* FIXME: handle href later */}
+            <CTAButton text="ابدأ رحلتك الآن" href="/" />
           </motion.div>
 
           <motion.div
