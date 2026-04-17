@@ -15,8 +15,14 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
+            $table->string('password')->nullable();
+            $table->string('phone')->nullable();
+            $table->enum('gender', ['male', 'female'])->nullable();
+            $table->enum('role', ['owner', 'admin', 'staff', 'student'])->default('student');
+            $table->string('google_id')->nullable()->unique(); // for Google OAuth
+            $table->string('avatar')->nullable();             // Google profile picture
+            $table->boolean('is_active')->default(true);
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
             $table->rememberToken();
             $table->timestamps();
         });
